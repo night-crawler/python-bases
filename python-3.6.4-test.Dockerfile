@@ -10,7 +10,8 @@ ENV RUN_DEPS \
 
 ENV PYTHON_PACKAGES \
     pytest \
-    bumpversion
+    bumpversion \
+    coverage
 
 RUN apt-get update \
  && apt-get --assume-yes upgrade \
