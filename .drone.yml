@@ -1,6 +1,7 @@
 pipeline:
 
   python-3.6.4-common.Dockerfile:
+    group: build
     image: plugins/docker
     registry: docker.force.fm
     repo: docker.force.fm/msa/python-common
@@ -9,10 +10,11 @@ pipeline:
     secrets: [ docker_username, docker_password ]
 
   python-3.6.4-test.Dockerfile:
+    group: build
     image: plugins/docker
     registry: docker.force.fm
     repo: docker.force.fm/msa/python-test
-    dockerfile: ppython-3.6.4-test.Dockerfile
+    dockerfile: python-3.6.4-test.Dockerfile
     tags: [ 3.6.4 ]
     secrets: [ docker_username, docker_password ]
 
